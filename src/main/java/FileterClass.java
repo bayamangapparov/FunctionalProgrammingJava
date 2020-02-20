@@ -14,8 +14,14 @@ public class FileterClass {
 //					return name.equals("Baiaman");
 //				}
 //			})
-			.filter(name -> !name.equals("Baiaman"))
-			.forEach(name -> System.out.println(name));
+			.filter(FileterClass::isNotBai)
+			.forEach(System.out::println);
+		
+	}
+	
+	private static boolean isNotBai(String name) {
+		
+		return !name.equals("Baiaman");
 	}
 
 }
